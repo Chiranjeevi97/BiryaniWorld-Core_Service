@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Weekly Specials</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .special-offer {
+            background-color: #fff3cd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 th:text="${campaignTitle}">Weekly Specials</h1>
+        </div>
+        <div class="content">
+            <p>Dear Valued Customer,</p>
+            <div th:utext="${campaignContent}"></div>
+            <div class="special-offer">
+                <h2>This Week's Special Offers</h2>
+                <ul>
+                    <li>20% off on all Biryani orders</li>
+                    <li>Free dessert with orders above $30</li>
+                    <li>Family pack special discount</li>
+                </ul>
+            </div>
+            <p>Visit our restaurant or order online to avail these offers!</p>
+        </div>
+        <div class="footer">
+            <p>© 2024 Biryani World. All rights reserved.</p>
+            <p>To unsubscribe from these emails, click here.</p>
+        </div>
+    </div>
+</body>
+</html> 

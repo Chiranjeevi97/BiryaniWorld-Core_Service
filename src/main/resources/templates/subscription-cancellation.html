@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Subscription Cancellation</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { text-align: center; padding: 20px 0; background-color: #f8f9fa; }
+        .content { padding: 20px; }
+        .footer { text-align: center; padding: 20px; font-size: 12px; color: #666; }
+        .button { display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Subscription Cancelled</h1>
+        </div>
+        <div class="content">
+            <p>Dear <span th:text="${customerName}">Customer</span>,</p>
+            
+            <p>We're sorry to see you go! Your subscription to <strong th:text="${planName}">subscription plan</strong> has been cancelled.</p>
+            
+            <p>Your subscription benefits will remain active until the end of your current billing period.</p>
+            
+            <p>We hope you enjoyed being a subscriber. If you change your mind, you can resubscribe at any time to continue enjoying our exclusive benefits:</p>
+            <ul>
+                <li>Exclusive discounts on all orders</li>
+                <li>Priority customer service</li>
+                <li>Special member-only offers</li>
+                <li>Extra reward points on every purchase</li>
+            </ul>
+            
+            <p style="text-align: center;">
+                <a href="http://your-domain.com/subscribe" class="button">Resubscribe Now</a>
+            </p>
+            
+            <p>If you have any questions or feedback, please don't hesitate to contact us.</p>
+        </div>
+        <div class="footer">
+            <p>This is an automated message, please do not reply directly to this email.</p>
+            <p>&copy; 2024 Biryani World. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Status Update</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .status-box {
+            background-color: #e9ecef;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Order Status Update</h1>
+        </div>
+        <div class="content">
+            <p>Dear <span th:text="${customerName}">Customer</span>,</p>
+            <div class="status-box">
+                <h2 th:text="${orderStatus}">Order Status</h2>
+                <p th:text="${statusMessage}">Status message</p>
+            </div>
+            <p>Order Details:</p>
+            <div th:utext="${orderDetails}"></div>
+            <p>Estimated Time: <span th:text="${estimatedTime}">Time</span></p>
+        </div>
+        <div class="footer">
+            <p>© 2024 Biryani World. All rights reserved.</p>
+            <p>Track your order: <a th:href="${trackingLink}">Click here</a></p>
+        </div>
+    </div>
+</body>
+</html> 

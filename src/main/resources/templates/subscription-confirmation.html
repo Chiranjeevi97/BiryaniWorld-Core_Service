@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Subscription Confirmation</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { text-align: center; padding: 20px 0; background-color: #f8f9fa; }
+        .content { padding: 20px; }
+        .footer { text-align: center; padding: 20px; font-size: 12px; color: #666; }
+        .button { display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to Biryani World!</h1>
+        </div>
+        <div class="content">
+            <p>Dear <span th:text="${customerName}">Customer</span>,</p>
+            
+            <p>Thank you for subscribing to our <strong th:text="${planName}">subscription plan</strong>! We're excited to have you as a member.</p>
+            
+            <h2>Your Subscription Details:</h2>
+            <ul>
+                <li>Plan: <span th:text="${planName}">Plan Name</span></li>
+                <li>Valid Until: <span th:text="${endDate}">End Date</span></li>
+            </ul>
+            
+            <p>As a subscriber, you'll enjoy:</p>
+            <ul>
+                <li>Exclusive discounts on all orders</li>
+                <li>Priority customer service</li>
+                <li>Special member-only offers</li>
+                <li>Extra reward points on every purchase</li>
+            </ul>
+            
+            <p>If you have any questions about your subscription, please don't hesitate to contact us.</p>
+            
+            <p style="text-align: center;">
+                <a href="http://your-domain.com/dashboard" class="button">View Your Dashboard</a>
+            </p>
+        </div>
+        <div class="footer">
+            <p>This is an automated message, please do not reply directly to this email.</p>
+            <p>&copy; 2024 Biryani World. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html> 
